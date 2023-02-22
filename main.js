@@ -46,7 +46,7 @@ productlist.push({
     image: 'https://www.tecnopiso.mx/admin/img/colores/originalx5/288fca_amonto@1.jpg',
 });
 
-
+//catalogo
 function renderProducts (arr){
     for (product of arr){
         const productCard = document.createElement('div');
