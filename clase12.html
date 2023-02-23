@@ -23,13 +23,13 @@
         body{
             font-family: 'Quicksand', sans-serif;
         }
-        .product-detail{
+        .view-product-detail{
             width: 360px;
             padding-bottom: 24px;
             position: absolute;
             right: 0;
         }
-        .product-detail-close{
+        .view-product-detail-close{
             background: var(--white);
             width: 14px;
             height: 14px;
@@ -41,37 +41,37 @@
             border-radius: 50%;
         }
         
-        .product-detail-close:hover{
+        .view-product-detail-close:hover{
             cursor: pointer;
         }
-        .product-detail > img:nth-child(2){
+        .view-product-detail > img:nth-child(2){
             width: 100%;
             height: 360px;
             object-fit: cover;
             border-radius: 0 0 20px 20px;
         }
-        .product-info {
+        .view-product-info {
             margin: 24px 24px 0 24px;
         }
-        .product-info p:nth-child(1) {
+        .view-product-info p:nth-child(1) {
             font-weight: bold;
             font-size: var(--md);
             margin-top: 0;
             margin-bottom: 4px;
         }
-        .product-info p:nth-child(2) {
+        .view-product-info p:nth-child(2) {
             color: var(--very-light-pink);
             font-size: var(--md);
             margin-top: 0;
             margin-bottom: 36px;
         }
-        .product-info p:nth-child(3) {
+        .view-product-info p:nth-child(3) {
             color: var(--very-light-pink);
             font-size: var(--sm);
             margin-top: 0;
             margin-bottom: 36px;
         }
-        .primary-button{
+        .view-primary-button{
             background-color: var(--hospital-green);
             border-radius: 8px;
             border: none;
@@ -88,23 +88,23 @@
             justify-content: center;
         }
         @media (max-width: 640px) {
-            .product-detail {
+            .view-product-detail {
                 width: 100%;
         }
     }
     </style>
 </head>
 <body>
-    <aside class="product-detail">
-        <div class="product-detail-close">
+    <aside class="view-product-detail">
+        <div class="view-product-detail-close">
             <img src="./icons/Platzi_YardSale_Icons/icon_close.png" alt="close">
         </div>
         <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="bike">
-        <div class="product-info">
+        <div class="view-product-info">
             <p>$35,00</p>
             <p>Bike</p>
             <p>with its practical position, this bike also fulfill a decorative function, add your hall or workspace.</p>
-            <button class="primary-button add-to-cart-button">
+            <button class="view-primary-button add-to-cart-button">
                 <img src="./icons/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="add to cart">
                 Add to cart
             </button>
