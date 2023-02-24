@@ -1,33 +1,51 @@
 const menuEmail = document.querySelector('.navbar-email')
 const iconMenu = document.querySelector('.menu');
 const menuIconCar = document.querySelector('.navbar-shopping-cart');
+const productDetailClose = document.querySelector('.product-detail-close');
 const desktopMenu = document.querySelector('.desktop-menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const aside = document.querySelector('.product-detail')
+const productDetail = document.querySelector('.view-product-detail')
 const cardsContainer =document.querySelector('.cards-container');
+
 
 
 menuEmail.addEventListener('click', toggleDesktopMenu);
 iconMenu.addEventListener('click', toggleMobileMenu);
 menuIconCar.addEventListener('click', toggleCarAside);
-
+productDetailClose.addEventListener('click', closeProductDetail);
 
 function toggleDesktopMenu(){
     aside.classList.add('inactive');
+    productDetail.classList.add('inactive');
     desktopMenu.classList.toggle('inactive');
     
 }
 
 function toggleMobileMenu(){
     aside.classList.add('inactive');
+    productDetail.classList.add('inactive');
     mobileMenu.classList.toggle('inactive');
 }
 
 function toggleCarAside(){
     mobileMenu.classList.add('inactive');
     desktopMenu.classList.add('inactive');
+    productDetail.classList.add('inactive');
     aside.classList.toggle('inactive');
 }
+
+function openProductDetail(){
+    mobileMenu.classList.add('inactive');
+    desktopMenu.classList.add('inactive');
+    aside.classList.add('inactive');
+    productDetail.classList.remove('inactive');
+}
+
+function closeProductDetail(){
+    productDetail.classList.add('inactive');
+}
+
 
 const productlist = [];
 productlist.push({
@@ -54,6 +72,7 @@ function renderProducts (arr){
     
         const productImg = document.createElement('img');
         productImg.setAttribute('src', product.image);
+        productImg.addEventListener('click', openProductDetail);
     
         const productInfo = document.createElement('div');
         productInfo.classList.add('product-info');
